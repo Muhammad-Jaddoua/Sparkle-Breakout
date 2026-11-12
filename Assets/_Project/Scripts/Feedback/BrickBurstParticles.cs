@@ -32,10 +32,20 @@ public class BrickBurstParticles : MonoBehaviour
     [Tooltip("How much lighter some pieces are than the brick (0 = exact brick color).")]
     [SerializeField, Range(0f, 1f)] private float highlightAmount = 0.45f;
 
+    [Header("Trigger")]
+    [Tooltip("ON: burst the moment a brick is destroyed. OFF: BrickImplode calls Burst() after its shrink finishes.")]
+    [SerializeField] private bool burstOnEvent = true;
+
     private void OnEnable()  { GameEvents.BrickDestroyed += HandleBrickDestroyed; }
     private void OnDisable() { GameEvents.BrickDestroyed -= HandleBrickDestroyed; }
 
     private void HandleBrickDestroyed(ImpactInfo info)
+    {
+        if (burstOnEvent) Burst(info);
+    }
+
+    /// <summary>Emits the confetti and sparkles for a destroyed brick.</summary>
+    public void Burst(ImpactInfo info)
     {
         int combo = Mathf.Max(0, info.Combo - 1);
 
