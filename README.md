@@ -19,7 +19,7 @@ Name and student ID: **Muhammad Jaddoua, 202246240**
 Gameplay is unchanged between the scenes: level layout, ball speed, paddle controls, collision shapes, points and lives. All feedback is added as new scripts and objects. No starter gameplay script was edited, and all animation is done on visual child objects, never on colliders or physics bodies.
 
 ## Intended feel
-**Playful and bouncy.** Everything is sparkly and party-like: a jello-gem paddle that squishes and wobbles on every hit, confetti and pastel sparkles when bricks pop, a rounded bubbly HUD font, and cheerful mouth-made sound effects. Effects are quick and springy, with overshoot, and kept small or faint enough that the ball and paddle always stay readable.
+**Playful and bouncy.** Everything is sparkly and party-like: a jello-gem paddle that squishes and wobbles on every hit, confetti and pastel sparkles when bricks pop, a rounded bubbly HUD font, and cheerful vocal sound effects. Effects are quick and springy, with overshoot, and kept small or faint enough that the ball and paddle always stay readable.
 
 ## Improvements
 | Improvement | Trigger | Implementation file/object | Purpose |
@@ -60,7 +60,7 @@ Link: [Demo/SWE402_Assignment_3.mp4](Demo/SWE402_Assignment_3.mp4) — stored in
 
 ## Credits
 - Starter adapted from [JuiceLab](https://github.com/serkoceyhan/JuiceLab) by Serkan Ceyhan, MIT. See `LICENSE` and `SOURCE.md`.
-- **Sound effects:** all sounds were recorded by me with my own voice and mouth, and trimmed and levelled with ffmpeg and Python.
+- **Sound effects:** all sounds are vocal sound effects recorded by me with my own voice, and trimmed and levelled with ffmpeg and Python.
 - **Font:** [Fredoka](https://github.com/google/fonts/tree/main/ofl/fredoka), SIL Open Font License 1.1 (`Assets/_Project/Fonts/Fredoka-OFL.txt`).
 - **Victory banner clip:** the "VICTORY" green-screen clip is from the *Happy Wheels* victory screen (Happy Wheels is by Jim Bonacci / Fancy Force; all rights belong to its creators). I obtained it as a green-screen video from YouTube (source: https://www.youtube.com/watch?v=lcJH8JtgZoE). It is used only for this coursework. I removed the on-screen timer text with ffmpeg and removed the green background in Unity with my own shader (`Assets/_Project/Shaders/UIChromaKey.shader`).
 - **Sprites:** the gem paddle, gem ball, sparkle star, fizz dot and vignette images were generated with AI assistance (Claude Code scripts) specifically for this project. The confetti square is a simple shape made in the Unity Editor.
