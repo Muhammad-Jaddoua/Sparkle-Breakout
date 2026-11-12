@@ -8,7 +8,7 @@ A brick-breaker from the course's JuiceLab starter, with game-feel feedback adde
 Name and student ID: **Muhammad Jaddoua, 202246240**
 
 ## Run
-- **Unity version:** 6000.3.27f1 (Unity 6.3; the course specifies 6000.3.2f1, same 6000.3 line)
+- **Unity version used: 6000.3.27f1** (Unity 6.3). The course specifies 6000.3.2f1; this project was built and tested on 6000.3.27f1, which is a later patch of the same 6000.3 line.
 - **Scenes** (both in `Assets/_Project/Scenes/`):
   - `Before.unity` — the original, unpolished starter. Unchanged.
   - `After.unity` — a duplicate of `Before` with all the feedback added.
@@ -40,7 +40,11 @@ Gameplay is unchanged between the scenes: level layout, ball speed, paddle contr
 - `CameraShake`: Magnitude 0.3
 
 ## Playtest and revision
-**What the tester noticed:** A playtester cleared all the bricks and could not tell what had happened. Their words were roughly: "how do I win, I don't know if I won, why are there no more blocks?" In `Before` (and in my first `After`), clearing the board just left the ball bouncing in an empty arena, with nothing to say the player had won.
+**Which version felt better, and why:** The tester preferred `After`. They said its visual and sound cues made the gameplay enjoyable, while `Before` felt "very bare and depressing". The brick-break effect and sound made it clear when a brick was destroyed.
+
+**What was hard to notice:** Losing a life and winning were both hard to notice. For losing a life, `After` has a pink screen-edge flash, a small camera shake and a pop on the lives text (`LifeLossCue`, `CameraShake`, `TextPunch`). For winning, see the revision below.
+
+**The problem that led to my revision:** A playtester cleared all the bricks and could not tell what had happened. Their words were roughly: "how do I win, I don't know if I won, why are there no more blocks?" In `Before` (and in my first `After`), clearing the board just left the ball bouncing in an empty arena, with nothing to say the player had won.
 
 **What I changed:** I added a victory celebration (`VictoryCelebration.cs`, object `VictoryCelebration` plus the `VictoryBanner` overlay). When the score reaches 280, which is all 28 bricks cleared at 10 points each, a short "VICTORY" banner clip plays over the game with its sound, with the green screen removed by a small shader. It is feedback only: it does not pause or end the game, and the score, lives and rules are unchanged, so the ball keeps bouncing as in the starter. I also erased a leftover "12.37 seconds" timer from the clip, because it would have been confusing. It can replay after a game-over reset brings the score back below 280.
 
@@ -59,5 +63,5 @@ Link: [Demo/SWE402_Assignment_3.mp4](Demo/SWE402_Assignment_3.mp4) — stored in
 - **Sound effects:** all sounds were recorded by me with my own voice and mouth, and trimmed and levelled with ffmpeg and Python.
 - **Font:** [Fredoka](https://github.com/google/fonts/tree/main/ofl/fredoka), SIL Open Font License 1.1 (`Assets/_Project/Fonts/Fredoka-OFL.txt`).
 - **Victory banner clip:** the "VICTORY" green-screen clip is from the *Happy Wheels* victory screen (Happy Wheels is by Jim Bonacci / Fancy Force; all rights belong to its creators). I obtained it as a green-screen video from YouTube (source: https://www.youtube.com/watch?v=lcJH8JtgZoE). It is used only for this coursework. I removed the on-screen timer text with ffmpeg and removed the green background in Unity with my own shader (`Assets/_Project/Shaders/UIChromaKey.shader`).
-- **Sprites:** the gem paddle, gem ball, sparkle star, fizz dot and vignette images were generated with AI assistance (Claude Code scripts) specifically for this project. The confetti square and pop circle are simple shapes made in the Unity Editor.
+- **Sprites:** the gem paddle, gem ball, sparkle star, fizz dot and vignette images were generated with AI assistance (Claude Code scripts) specifically for this project. The confetti square is a simple shape made in the Unity Editor.
 - **Tools:** Unity 6000.3, FFmpeg (audio conversion and trimming only).
