@@ -78,6 +78,10 @@ Key facts from the code:
     New sprites MUST stay exactly 1x1 unit: `Paddle.Width` is read from the visual sprite and drives bounce angle.
   - #5 Additional technique: **ball trail — done**: `BallFizzTrail.cs` (faint ribbon + sparkles; ribbon opacity ~12%).
   - #3 Event-based audio — **next** (mouth-recorded sounds). #4 Score UI animation — **next**.
+- Extras done: `BrickImplode`, `LifeLossCue`, `CameraShake` (toggle `Shake Enabled`), Fredoka HUD theme, audio (13 trimmed mouth clips).
+- Playtest revision (Section 4): tester cleared the board and didn't know they won -> `VictoryCelebration` plays a
+  green-keyed "VICTORY" banner clip at score 280 (all bricks). **Feedback only: it must never pause the game, change
+  Time.timeScale, or add a win/lose state** (brief: no new gameplay systems). Third-party clip: credit in README.
 - Unity quirks: an unfocused Unity editor pauses Play mode (use `Application.runInBackground` only temporarily and
   restore `PlayerSettings.runInBackground = false`). Unity MCP tools exist (`mcp__unity-mcp__*`); `Debug.Log`
   formats need string concat, not `{0}` formatting.
