@@ -2,6 +2,8 @@
 
 A brick-breaker from the course's JuiceLab starter, with game-feel feedback added in a separate `After` scene.
 
+**▶ [Watch the demonstration video](Demo/SWE402_Assignment_3.mp4)** (opens a player on GitHub)
+
 ## Student
 Name and student ID: **Muhammad Jaddoua, 202246240**
 
@@ -45,7 +47,7 @@ Gameplay is unchanged between the scenes: level layout, ball speed, paddle contr
 **What I observed afterwards:** I had the same tester play the new version and clear the board. They said it was "much better" and that they now knew when they had won.
 
 ## Demonstration video
-Link: _to be added_
+Link: [Demo/SWE402_Assignment_3.mp4](Demo/SWE402_Assignment_3.mp4) — stored in this repository (Git LFS). Click it on GitHub to play it in the browser.
 
 ## AI use
 - **Tool:** Claude Code (Anthropic; models Claude Opus 5.5 and Claude Sonnet 5.5), used together with the Unity MCP bridge so it could edit and test in the Unity Editor.

@@ -6,7 +6,7 @@
 - Never commit `Library/`, `Temp/`, `Logs/` (brief requires excluding them), nor `UserSettings/`, `obj/`, builds,
   `*.csproj`/`*.sln`, `.claude/settings.local.json` (all in `.gitignore`). No standalone build needed.
 - `.gitattributes` routes audio (`*.wav`, `*.ogg`, `*.mp3`), images, fonts and video through **Git LFS**.
-  Run `git lfs install` once per machine. Do not commit the demo video; link it from the README.
+  Run `git lfs install` once per machine. The demo video lives in `Demo/` (outside `Assets/`, tracked by LFS) and is linked from the README. Re-cutting it means amending before pushing, since LFS history keeps old versions.
 - Every `.meta` file must be committed together with its asset.
 - Small, logical commits in imperative mood, one improvement per commit where possible
   (e.g. `Add paddle squash to After scene`). Keep editor reserialization noise in its own commit.
