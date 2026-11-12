@@ -71,8 +71,14 @@ Key facts from the code:
   light cheerful sounds; restrained, never obscuring ball/paddle.
 - Audio: the user records all sound effects with their own mouth → self-made assets; credit them as such in the
   README Credits.
-- Improvement #1 (brick impact): **in progress** via `Scripts/Feedback/BrickBurstParticles.cs` (confetti + pop
-  ring, emit-on-demand); awaiting Editor setup and tuning by the user.
-- Additional technique (#5): _not chosen yet_. The brief's examples: ball trail, brick disappearance animation,
-  life-loss cue, restrained camera shake. Picking one of these is the safest choice.
+- Progress (all in After.unity, committed):
+  - #1 Brick impact — **done**: `BrickBurstParticles.cs` (brick-colored confetti + pastel `SparkleStar` sparkles).
+  - #2 Reactive animation — **done**: `PaddleJiggle.cs` (squish build-up, teal→milky color shift, spring-out jiggle,
+    tiny `FizzDot` fizz). Paddle/ball use AI-generated gem sprites (`GemPaddle`, `GemBall`, `FizzDot`) — credit in README.
+    New sprites MUST stay exactly 1x1 unit: `Paddle.Width` is read from the visual sprite and drives bounce angle.
+  - #5 Additional technique: **ball trail — done**: `BallFizzTrail.cs` (faint ribbon + sparkles; ribbon opacity ~12%).
+  - #3 Event-based audio — **next** (mouth-recorded sounds). #4 Score UI animation — **next**.
+- Unity quirks: an unfocused Unity editor pauses Play mode (use `Application.runInBackground` only temporarily and
+  restore `PlayerSettings.runInBackground = false`). Unity MCP tools exist (`mcp__unity-mcp__*`); `Debug.Log`
+  formats need string concat, not `{0}` formatting.
 - Which event combines two techniques: _likely BrickDestroyed = particles + sound (+ score pop)_.
