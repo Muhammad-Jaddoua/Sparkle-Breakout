@@ -13,3 +13,5 @@
 - Before committing: `git status`, and confirm `Before.unity`, `Scripts/Core/`, `Scripts/Gameplay/`,
   `Prefabs/Brick.prefab` and `Bouncy.physicsMaterial2D` are untouched (`git diff --stat` on them is empty).
 - Commit or push only when the user asks. Never force-push or rewrite pushed history.
+- Local-only (do not commit): the `com.unity.ai.assistant` (Unity MCP bridge) additions in `Packages/manifest.json`
+  and `Packages/packages-lock.json`. Stage files by name, never `git add -A`/`.` while those diffs are pending.
