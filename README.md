@@ -4,6 +4,8 @@ A brick-breaker from the course's JuiceLab starter, with game-feel feedback adde
 
 **▶ [Watch the demonstration video](Demo/SWE402_Assignment_3.mp4)** (opens a player on GitHub)
 
+**🎮 [Play the game in your browser (After version)](https://play.unity.com/en/games/510d99ba-0fb5-4838-b520-373a9cf77900/sparkle-breakout)** (Unity Play)
+
 ## Student
 Name and student ID: **Muhammad Jaddoua, 202246240**
 
